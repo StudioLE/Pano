@@ -131,11 +131,8 @@
   if (!q.mono && !q.url) q.mono = "/" + {{ .RawContent }} + "/image";
 
   if (q.mono) {
-    loadStereoTexture(q.mono+"_th.jpg");
-    setTimeout(function(){
-      document.getElementById("loading").style.display = "none";
-      loadStereoTexture(q.mono+".jpg");      
-    },2000)
+    loadStereoTexture(q.mono+".jpg");
+    document.getElementById("loading").style.display = "none";
   } else {
     loadStereoTexture(q.url+".jpg", q.url);
     document.getElementById("loading").style.display = "none";
