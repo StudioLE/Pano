@@ -16,7 +16,7 @@ nav {
   display: inline-block;
   background-clip: padding-box;
   background-size: cover;
-  background-position-y: 0;
+  background-position-y: 20%;
   border: 5px solid rgba(0,0,0,.2);
   outline: 2px solid rgba(255,255,255,.5);
   cursor: pointer;
