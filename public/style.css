@@ -1,0 +1,34 @@
+nav {
+  height: 100%;
+  position: fixed;
+  background: transparent;
+  display: flex;
+  /*align-items: flex-end;*/
+  flex-direction: column;
+  justify-content: flex-end;
+ }
+
+ nav a.thumb {
+  margin: 5px;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-clip: padding-box;
+  background-size: cover;
+  background-position-y: 20%;
+  border: 5px solid rgba(0,0,0,.2);
+  outline: 2px solid rgba(255,255,255,.5);
+  cursor: pointer;
+  color: rgba(255,255,255,0);
+  font-family: sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+ }
+ nav a:hover.thumb {
+  width: 105px;
+  height: 105px;
+  color: #fff;
+  border: 5px solid rgba(0,0,0,.5);
+  outline: 2px solid rgba(255,255,255,.75);
+ }

@@ -1,0 +1,166 @@
+
+      * {
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+      }
+      html, body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: monospace;
+      }
+      canvas {
+        overflow: hidden;
+        position:fixed;
+        width: 100%;
+        height: 100%;
+        cursor:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAt1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8AAAAzMzP6+vri4uISEhKKioqtra2dnZ2EhIR9fX10dHRkZGQdHR3t7e3Hx8e5ubm1tbWoqKhWVlZKSko4ODgICAjv7+/o6OjMzMyxsbFOTk4pKSkXFxcEBAT29vbW1tZ6enpISEgLCwvhzeX+AAAAGXRSTlMANRO0nHRJHfnskIxQRKh89syDVwTWZjEJxPFEswAAAOFJREFUKM+1j+lygkAQhIflEAJe0Rw9u4CCeKKoSTTX+z9XoMJWWeX+ssrvZ3f19DQ5zOw/0DUMQPlmQ72bE2adBp8/Rp3CQUi3ILx+bxj4fjDs9T1Bmo6bbPPN8aDU4bjJt4nb+de789kSFyxn826jW3ICLNZZKU8nWWbrBTCRVm04U8TpjquRFf1Go0d7l8aYOrUR7FGEFr1S9LGymwthgX2gE/Kl0cHPOtF2xOWZ5QpIC93RflW4InkDoPRXesd5LJIMQPzV7tCMa7f6BvhJL79AVDmYTNQ1NhnxbI/uwB8H5Bjd4zQPBAAAAABJRU5ErkJggg=='),default;      }
+
+
+      #rotatePhone {
+        display:none;
+        z-index: 10;
+        margin-top:100px;
+        width:50%;
+        position:fixed;
+        pointer-events: none;
+        -webkit-animation:pulse 4s infinite;
+      }
+
+        @-webkit-keyframes pulse{
+            30%{-webkit-transform: rotate(0deg)}
+            70%{-webkit-transform: rotate(-90deg)}
+            95%{-webkit-transform: rotate(-90deg)}
+            100%{-webkit-transform: rotate(0deg)}
+        }
+
+
+      .center {
+        width:50%;
+        margin-left:auto;
+        margin-right:auto;        
+      }
+
+      .icon {
+        background-color: rgba(0,0,0,.2);
+        border-style: solid;
+        border-color: rgba(255,255,255,.5);
+        border-width: 2px;
+        border-radius: 24px;
+        position: absolute; 
+        cursor:pointer;
+        display: block; 
+        width: 40px; 
+        height: 40px; 
+        background-size: cover;
+        -webkit-user-select: none; 
+        transition: transform 0.15s;
+        -moz-transition: -moz-transform 0.15s;
+        -webkit-transition: -webkit-transform 0.15s;
+        -webkit-tap-highlight-color: #1ff;
+      }
+
+      .icon:hover {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+      }
+
+      #icon_webvr {
+        width:64px;
+        height:64px;
+      }
+      #icon_exitfull {
+        display:none;
+      }
+      #icon_webvr {
+        display:none;
+      }
+      #zoom-icon {
+        right: 80px;
+        bottom: 25px;
+      }
+
+      #webvr-container {
+        left: 0; 
+        right: 0;
+        margin-left: auto; 
+        margin-right: auto;
+        bottom: 25px;         
+      }
+
+      #info-icon {
+        right: 20px;
+        bottom: 1px;
+      }
+
+      #loading {
+        position:absolute;
+        left:30px;
+      }
+
+      #infocard {
+        color:white;
+        background-color:gray; 
+        bottom:10px;
+        right:20px;
+        position:absolute; 
+        width:500px;
+        cursor:pointer;
+      }
+    p {
+       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+       font-weight: 300;
+       font-size: 11px;
+       margin-left: 15px;
+    }      
+
+      #infocard img {
+        width:500px;
+      }
+
+      .fadeup {
+          transition-duration: 0.25s;
+          transition-property: transform opacity;
+          outline: 0;
+          opacity: 0;
+          pointer-events: none;
+      }
+
+      .fadeup:focus img {
+        transform: translate(0,-15px);
+        -webkit-transform: translate(0,-15px);          
+      }
+
+      .fadeup img {
+          transition-duration: 0.5s;
+          transform: translate(0,75px);
+          -webkit-transform: translate(0,75px);          
+          transition-property: transform opacity;
+      }
+
+      .fadeup:focus {
+        opacity: 1.0;
+        transform: translate(0,-40px);
+        -webkit-transform: translate(0,-40px);
+        pointer-events: auto;
+      }
+
+
+      @media only screen and (orientation: landscape) and (min-device-width: 1200px) {
+          #webvr-container {
+            bottom: 20px; 
+          }
+
+          #infocard {
+            bottom: 70px;
+          }
+
+          #info-icon {
+            bottom: 25px;
+          }
+
+          #zoom-icon {
+            right: 90px; 
+          }
+      }

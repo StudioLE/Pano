@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    
+    <meta name="viewport" content="user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <title>04 South Court, Treasury Terrace</title>
+    <link rel="stylesheet" href="/pano.css">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+      <canvas id="c"></canvas>
+
+    <div id="infocard" class="fadeup" tabindex="1" ><p>.</p><img src="/infocard.jpg" onclick="window.open('http://pano.autodesk.com/')"></div>
+    <div id="loading">
+      <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+      <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+      <animateTransform attributeType="xml"
+      attributeName="transform"
+      type="rotate"
+      from="0 25 25"
+      to="360 25 25"
+      dur="0.6s"
+      repeatCount="indefinite"/>
+      </path>
+      </svg>
+    </div>
+    <div class="center">
+    <svg id="rotatePhone" viewBox="-58.5 -52.5 128 128" x="0px" y="0px" width="128px" height="128px">
+      <path fill="white" d="M25.834-52.521h-40.667c0,0-11.618,0-11.618,11.635V63.85c0,11.63,11.618,11.63,11.618,11.63h40.667
+        c0,0,11.617,0,11.617-11.63V-40.885C37.451-52.521,25.834-52.521,25.834-52.521z M-3.213-45.425c0-0.724,0.345-1.285,0.771-1.285
+        h15.886c0.419,0,0.771,0.575,0.771,1.285v0.34c0,0.723-0.347,1.285-0.771,1.285H-2.442c-0.419,0-0.771-0.576-0.771-1.285V-45.425z
+         M5.5,70.641c-3.211,0-5.81-2.604-5.81-5.81c0-3.211,2.599-5.81,5.81-5.81c3.21,0,5.81,2.599,5.81,5.81
+        C11.311,68.037,8.711,70.641,5.5,70.641z M31.644,54.953h-52.285v-92.95h52.285V54.953z M-6.339,9.497h-6.065
+        c-0.21-4.904,1.543-9.876,5.282-13.619c6.416-6.419,16.435-7.009,23.544-1.818c1.389-1.376,3.398-3.338,3.398-3.338
+        c1.219-1.191,2.394-0.156,2.35,0.918V3.364c0,0.452-0.37,0.82-0.831,0.82h-1.644c-0.461,0-0.828,0-0.828,0s-0.364,0-0.812,0H9.516
+        C8.792,4.206,7.362,3.322,8.639,1.79c0,0,1.814-1.824,3.403-3.39C7.373-4.454,1.2-3.878-2.839,0.162
+        C-5.403,2.726-6.556,6.144-6.339,9.497z M17.342,7.46h6.07c0.203,4.907-1.539,9.868-5.289,13.618
+        c-6.417,6.417-16.435,7.014-23.538,1.82c-1.396,1.381-3.403,3.331-3.403,3.331c-1.22,1.203-2.395,0.164-2.349-0.906V13.6
+        c0.012-0.461,0.369-0.83,0.828-0.83h1.646c0.453,0,0.828,0,0.828,0s0.363,0.012,0.823,0.012l8.526-0.012
+        c0.727-0.021,2.156,0.858,0.88,2.397c0,0-1.822,1.828-3.405,3.398C3.628,21.414,9.8,20.834,13.839,16.8
+        C16.404,14.24,17.555,10.813,17.342,7.46z"/>    
+    </svg>
+    </div>
+
+    <svg id="zoom-icon" class="icon metro" onclick="zoom()" ontouchstart="zoom();return false;" draggable="false" viewBox="0 0 23 23">
+    <g fill="white">
+    <path id="icon-zoomin" d="M16.116,11h-4.117V6.884c0-0.276-0.224-0.5-0.5-0.5s-0.5,0.224-0.5,0.5V11H6.884c-0.276,0-0.5,0.224-0.5,0.5
+      s0.224,0.5,0.5,0.5h4.115v4.115c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5V12h4.117c0.276,0,0.5-0.224,0.5-0.5
+      S16.393,11,16.116,11z"/>
+      <path d="M16.115,12H6.884c-0.276,0-0.5-0.224-0.5-0.5s0.224-0.5,0.5-0.5h9.231c0.277,0,0.5,0.224,0.5,0.5
+    S16.393,12,16.115,12z"/>
+    </g>
+
+</svg> 
+
+    <svg id="info-icon" class="icon metro" onclick="showinfo()" draggable="false" viewBox="0 0 23 23"><g fill="white">
+        <path d="M11.5,9.646c-0.276,0-0.5,0.224-0.5,0.5v6.668c0,0.275,0.224,0.5,0.5,0.5s0.5-0.225,0.5-0.5v-6.668
+          C12,9.87,11.776,9.646,11.5,9.646z"/>
+        <path d="M11.5,5.686c-0.552,0-1,0.448-1,1.002c0,0.549,0.448,0.998,1,0.998c0.551,0,1-0.449,1-0.998
+          C12.5,6.134,12.051,5.686,11.5,5.686z"/>         
+    </g></svg>
+
+  <div id="webvr-container" class="icon metro" onclick="startVRfullscreen();return false;" draggable="false"></div>
+
+<nav id="nav">
+  
+  
+  <a class="thumb" href="/central-arcade-centre/" style="background-image: url(/P03/image_th.jpg)">
+    01 Central Court, Centre
+  </a>
+  
+  <a class="thumb" href="/south-court-mp/" style="background-image: url(/A04/image_th.jpg)">
+    02 South Court, MP Seat
+  </a>
+  
+  <a class="thumb" href="/south-court-dispatch/" style="background-image: url(/P26/image_th.jpg)">
+    03 South Court, Despatch Box
+  </a>
+  
+  <a class="thumb active" href="/south-court-terrace/" style="background-image: url(/A05/image_th.jpg)">
+    04 South Court, Treasury Terrace
+  </a>
+  
+  <a class="thumb" href="/north-court-ground/" style="background-image: url(/A07/image_th.jpg)">
+    05 North Court, Ground Floor
+  </a>
+  
+  <a class="thumb" href="/north-court-fourth/" style="background-image: url(/P12/image_th.jpg)">
+    06 North Court, Fourth Floor
+  </a>
+  
+</nav>
+</body>
+
+  
+  <script id="vs" type="notjs">
+    attribute vec4 a_position;
+    uniform vec4 u_color;
+    varying vec4 v_color;
+    varying vec2 v_position;
+
+    void main() {
+      v_color = u_color;
+      v_position = a_position.xy;
+      gl_Position = a_position;
+    }
+  </script>
+
+
+  <script id="fs" type="notjs">
+    precision mediump float;
+    uniform samplerCube u_skybox;
+    uniform mat4 u_viewDirectionProjectionInverse;
+    varying vec2 v_position;
+    varying vec4 v_color;
+    uniform vec3 u_distortion;
+
+    // original src: http://rifty-business.blogspot.com/2013/08/understanding-oculus-rift-distortion.html
+    // typical u_distortion values: https://github.com/ValveSoftware/steamworks-vr-api/issues/4#issuecomment-34941206
+    float distortionScale(vec2 offset) {
+        vec2 offsetSquared = offset * offset;
+        float radiusSquared = offsetSquared.x + offsetSquared.y;
+        float distortionScale = //
+                u_distortion[0] + u_distortion[1] * radiusSquared + //
+                u_distortion[2] * radiusSquared * radiusSquared;
+        return distortionScale;
+    } 
+
+    void main() {
+      vec2 p = v_position;
+      if (u_distortion[0] > 0.0) p *= distortionScale(v_position);
+      vec4 t = u_viewDirectionProjectionInverse * vec4(p, 1, 1);
+      gl_FragColor =  textureCube( u_skybox, normalize(vec3(-t.x, t.yz) / t.w)) * v_color;
+    }
+  </script>
+ 
+  <script src="/twgl-dist.js"></script>
+  <script src="/pano.js"></script>
+  <script>
+
+  if (!q.mono && !q.url) q.mono = "/" + "A05" + "/image";
+
+  if (q.mono) {
+    loadStereoTexture(q.mono+".jpg");
+    document.getElementById("loading").style.display = "none";
+  } else {
+    loadStereoTexture(q.url+".jpg", q.url);
+    document.getElementById("loading").style.display = "none";
+  }
+
+  if (q.embed) {
+    document.getElementById("nav").style.display = "none";
+  }
+
+  </script>
+</html>
