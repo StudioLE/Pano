@@ -1,5 +1,7 @@
 /public
 
+.env
+
 infocard.jpg
 pano.html
 readme.txt
