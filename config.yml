@@ -1,6 +1,6 @@
 title: StudioLE Pano
 theme: default
 baseURL: http://example.org
-disableKinds: ["home", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
+disableKinds: ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
 uglyURLs: false
 SectionPagesMenu: main
