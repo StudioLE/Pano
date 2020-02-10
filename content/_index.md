@@ -1,7 +1,5 @@
 ---
 title: 01 Central Court, Centre
-menu:
-  main: 
-    identifier: P03
+layout: single
 ---
 P03
