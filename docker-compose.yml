@@ -3,9 +3,7 @@ version: '3.3'
 services:
   nginx:
     container_name: pano
-    image: nginx:1.17.8-alpine
-    expose: 
-      - "443"
+    image: nginx:1.18-alpine
     volumes:
       - ./public:/usr/share/nginx/html
     labels:
